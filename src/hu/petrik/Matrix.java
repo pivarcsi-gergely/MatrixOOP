@@ -15,5 +15,26 @@ public class Matrix {
     public Matrix() {
         this.sorokSzama = (int)(Math.random()*11)+5;
         this.oszlopokSzama = (int)(Math.random()*11)+5;
+        this.matrix = new int[this.sorokSzama][this.oszlopokSzama];
+
+        for (int i = 0; i < this.sorokSzama; i++) {
+            for (int j = 0; j < this.oszlopokSzama; j++) {
+                this.matrix[i][j] = (int)(Math.random()*90)+10;
+            }
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        String s = "";
+
+        for (int i = 0; i < this.sorokSzama; i++) {
+            for (int j = 0; j < this.oszlopokSzama; j++) {
+                s += matrix[i][j] + " ";
+            }
+            s += "\n";
+        }
+        return s;
     }
 }
