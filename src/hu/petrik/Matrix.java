@@ -24,6 +24,10 @@ public class Matrix {
         }
     }
 
+    public boolean isNegyzetes(){
+        return this.sorokSzama == this.oszlopokSzama;
+    }
+
 
     @Override
     public String toString() {
