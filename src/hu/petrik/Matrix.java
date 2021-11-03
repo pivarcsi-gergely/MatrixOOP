@@ -24,10 +24,41 @@ public class Matrix {
         }
     }
 
+    public int getSorokSzama() {
+        return sorokSzama;
+    }
+
+    public int getOszlopokSzama() {
+        return oszlopokSzama;
+    }
+
+
     public boolean isNegyzetes(){
         return this.sorokSzama == this.oszlopokSzama;
     }
 
+    public long matrixOsszeg() {
+        long osszeg = 0;
+
+        for (int i = 0; i < this.sorokSzama; i++) {
+            for (int j = 0; j < this.oszlopokSzama; j++) {
+                osszeg += matrix[i][j];
+            }
+        }
+        return osszeg;
+    }
+
+    public int pozitivDarabSzam(){
+        int pozitivDarabSzam = 0;
+        for (int i = 0; i < this.sorokSzama; i++) {
+            for (int j = 0; j < this.oszlopokSzama; j++) {
+                if (matrix[i][j] >= 0){
+                    pozitivDarabSzam++;
+                }
+            }
+        }
+        return pozitivDarabSzam;
+    }
 
     @Override
     public String toString() {
